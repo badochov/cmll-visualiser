@@ -1,0 +1,14 @@
+Manual:
+- This place displays CMLLs effect on LSE
+- It uses SiGN notation (wide moves are represented by lower case letters)
+- Colored edges represent flipped edges
+- If CMLL doesn't work (corners from D layer or edges outside from LSE are affected) big red cross is drawn
+- If you want to add U move after CMLL to change its orientation please write it at the begging in the square brackets ([U])
+- Arrows indicate where edge will go
+- You can input unlimited amount of CMLLs and navigate through them with left and right arrows(either buttons or keys)
+- Each time you change something in input section you must click generate or press enter for changes to appear
+- If you want to save an image right click (long press on mobile) and press save image as
+- If you want to save all you algs click download button or Insert
+- If you want to add comment you can type after your alg ' //comment here' it will be displayed only in PDF
+- You can change colors, what will be displayed and file name in settings in top right corner
+- If you find bug or missing feature contact me https://www.facebook.com/badochov or badocha.hubert@gmail.com

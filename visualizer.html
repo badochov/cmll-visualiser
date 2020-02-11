@@ -1,0 +1,81 @@
+<!doctype html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+	<link type="text/css" href="styles/burger.css" rel="stylesheet" />
+	<link type="text/css" href="styles/index2.css" rel="stylesheet" />
+	<link type="text/css" href="styles/toast.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+	<link rel='stylesheet' href='styles/spectrum.css' />
+	
+	
+	<script src="scripts/jquery.js"></script>
+	<script src='scripts/spectrum.js'></script>
+	<script src="scripts/moves.js"></script>
+	<script src="scripts/cmll2.js"></script>
+	<script src="scripts/toast.js"></script>
+	<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+</head>
+<body>
+	<nav role="navigation">
+		<div id="menuToggle">
+			<span><i onclick='burger()' class="material-icons set">tune</i></span>
+			<ul id="menu" style='display:none'>
+				<li>
+					Chose features
+					<ul id='drawing'>
+						<li >EO<span class='right'><input type='checkbox' checked id="eo"></span></li>
+						<li >EP<span class='right'><input type='checkbox' checked id="ep"></span></li>
+						<li >CLL<span class='right'><input type='checkbox' checked id="cll"></span></li>
+					</ul>
+				</li>
+				<li>
+					Chose colors<ul id='colors'>
+						<li class='face'>Top face<span class='right'><input type='text' id="top"></span></li>
+						<li class='face'>Left face<span class='right'><input type='text' id="left"></span></li>
+						<li class='face'>Right face<span class='right'><input type='text' id="right"></span></li>
+						<li class='face'>Front  face<span class='right'><input type='text' id="front"></span></li>
+						<li class='face'>Back  face<span class='right'><input type='text' id="back"></span></li>
+						<li class='edge'>Flipped edge<span class='right'><input type='text' id="flipped"/></span></li>
+						<li class='arrow'>Arrows<span class='right'><input type='text' id="arrow"></span></li>
+						<li class='outline'>Outlines of cube<span class='right'><input type='text' id="frame"></span></li>
+						<li class='bg'>Background<span class='right'><input type='text' id="bg"></span></li>
+						<li onclick='restoreDefaults()'>Restore default colors</li>
+					</ul>
+				</li>
+				<li>File name <span class='right name'><input type='text' id="filename" placeholder='CMLLs'></span></li>
+			</ul>
+		</div>
+	</nav>
+	<div id='wrapper'>
+		
+		<div id='input'>
+			<textarea id="scrambles"></textarea>
+			<br>
+			<p id='gener'>
+			<span id="gen"><i class="material-icons" id="generate">input</i></span>
+			<span id='pd'><i class="material-icons" id='pdf'>file_download</i></span>
+			</p>
+		</div>
+		<hr>
+		<p id='desc'>
+			<span id="number">&zwnj;</span>
+			<br>
+			<br>
+			<span id="scramble">&zwnj;</span>
+		</p>
+			<div id='output'>
+			<br>
+			<canvas id="state"></canvas>
+			<p id='arrows'>
+				<span id='p'><i class="material-icons" id='previous'>arrow_back</i></span>
+				<span id='n'><i class="material-icons" id='next'>arrow_forward</i></span>
+			</p>
+		</div>
+	</div>
+	<a id='helper' href='manual.txt'><i class="material-icons" id='help'>help</i></a>
+	<div id="toast"><div id="img"><i class="material-icons" >file_download</i></div><div id="desc">PDF is being created and downloaded</div></div>
+	
+	<script src="scripts/burger3.js"></script>
+	<script src="scripts/drawing2.js"></script>
+</body>
+</html>
