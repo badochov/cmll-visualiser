@@ -1,0 +1,87 @@
+body {
+  color: #000;
+  background: #aaa;
+  display: grid;
+  font-family: "Open Sans", sans-serif;
+  overflow-y: hidden;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  grid-template-areas: "burger wrapper blank";
+  grid-template-columns: 1fr 3fr 1fr;
+}
+#wrapper {
+  grid-area: wrapper;
+}
+nav {
+  float: left;
+  grid-area: burger;
+}
+textarea {
+  width: 60vw;
+  height: 14vh;
+  resize: none;
+  font-size: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  background: #fafafa;
+}
+#state,
+textarea {
+  display: block;
+  border: 10px solid #eee;
+  border-radius: 20px 20px 20px 20px;
+  margin: auto;
+}
+#p {
+  grid-area: p;
+}
+#n {
+  grid-area: f;
+}
+#output {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+#gener {
+  text-align: center;
+  display: grid;
+  grid-template-areas: "gen pdf";
+  grid-template-columns: 1fr 1fr;
+}
+#gen {
+  grid-area: gen;
+}
+#pd {
+  grid-area: pdf;
+}
+#arrows {
+  text-align: center;
+  display: grid;
+  grid-template-areas: "p f";
+  grid-template-columns: 1fr 1fr;
+}
+#desc {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+}
+#help {
+  position: absolute;
+  bottom: 1vw;
+  right: 1vw;
+}
+#helper {
+  position: relative;
+  margin-right: 1vw;
+  grid-area: blank;
+}
+.name {
+  width: 50%;
+}
+#filename {
+  width: 100%;
+}
