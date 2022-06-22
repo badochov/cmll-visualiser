@@ -1,4 +1,4 @@
-let cubeStencil = [
+let cubeTemplate = [
     [0, 0],
     [1, 0],
     [2, 0],
@@ -12,7 +12,7 @@ let cubeStencil = [
     [10, 0],
     [11, 0],
   ],
-  cornersStencil = [
+  cornersTemplate = [
     [0, 0],
     [1, 0],
     [2, 0],
@@ -23,7 +23,7 @@ let cubeStencil = [
     [7, 0],
   ],
   lookup = [4, 3, 1, 2, -1, -1, -1, -1, 5, -1, 0, -1],
-  cube = JSON.parse(JSON.stringify(cubeStencil)),
+  cube = JSON.parse(JSON.stringify(cubeTemplate)),
   corn = [],
   scrambles = [],
   scramble = "",
@@ -326,7 +326,7 @@ function addImage(canvas, x, y, doc) {
   doc.addImage(img, "jpg", x, y, tile, (3 / 2) * tile, undefined, "FAST");
 }
 function doCorners(scr) {
-  corn = JSON.parse(JSON.stringify(cornersStencil));
+  corn = JSON.parse(JSON.stringify(cornersTemplate));
   for (let i = 0; i < scr.length; i++) {
     let num = parseInt(scr[i][1]);
     switch (scr[i][0]) {

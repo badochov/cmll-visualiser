@@ -42,20 +42,20 @@ let tile = 75,
     $("#right").spectrum("get").toHexString(),
     $("#back").spectrum("get").toHexString(),
     $("#left").spectrum("get").toHexString(),
-  ];
-(lineWidth = (tile * 2) / 50),
-  (arrowWidth = (tile * 2) / 50),
-  (color = $("#flipped").spectrum("get").toHexString()),
-  (arrowColor = $("#arrow").spectrum("get").toHexString()),
-  (frameColor = $("#frame").spectrum("get").toHexString()),
-  (bgColor = $("#bg").spectrum("get").toHexString());
+  ],
+  lineWidth = (tile * 2) / 50,
+  arrowWidth = (tile * 2) / 50,
+  color = $("#flipped").spectrum("get").toHexString(),
+  arrowColor = $("#arrow").spectrum("get").toHexString(),
+  frameColor = $("#frame").spectrum("get").toHexString(),
+  bgColor = $("#bg").spectrum("get").toHexString();
 
 function restore() {
   ctx.clearRect(0, 0, 4 * tile, 6 * tile + lineWidth);
   ctx.fillStyle = bgColor;
   ctx.fillRect(0, 0, 4 * tile, 6 * tile + lineWidth);
   drawCube();
-  cube = JSON.parse(JSON.stringify(cubeStencil));
+  cube = JSON.parse(JSON.stringify(cubeTemplate));
 }
 function drawCube() {
   ctx.lineWidth = lineWidth;
